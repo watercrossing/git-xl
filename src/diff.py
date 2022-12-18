@@ -29,7 +29,8 @@ def get_vba(workbook):
     return modules
 
 
-if __name__ == '__main__':
+
+def main():
     if not 8 <= len(sys.argv) <= 9:
         print('Unexpected number of arguments')
         sys.exit(0)
@@ -79,3 +80,7 @@ if __name__ == '__main__':
         print(Style.BRIGHT + diff['b'])
         print(diff['diff'])
         print('')
+
+
+if __name__ == '__main__':
+    main()

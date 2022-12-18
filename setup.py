@@ -24,4 +24,10 @@ setup(
     packages=["gitxl"],
     package_dir={"gitxl": "src"},
     python_requires=">=3.7",
+    entry_points = {
+        'console_scripts': [
+            'gitxl = gitxl.__main__:main',
+            'git-xl-diff = gitxl.diff:main'
+        ]
+    }
 )

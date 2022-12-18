@@ -16,7 +16,7 @@ GIT_IGNORE = ['~$*.' + file_ext for file_ext in FILE_EXTENSIONS]
 
 
 def is_frozen():
-    return getattr(sys, 'frozen', False)
+    return any('git-xl-diff.exe' in os.listdir(x) for x in os.environ['PATH'].split(";") if os.path.exists(x)) or getattr(sys, 'frozen', False)
 
 
 def is_git_repository(path):
